@@ -1,7 +1,0 @@
-{
-  "name": "Gemini Image Editor",
-  "description": "A sophisticated image editing application powered by Gemini 2.5 Flash Image. Upload an image and use natural language to transform it - from removing backgrounds to adding artistic filters.",
-  "requestFramePermissions": [
-    "camera"
-  ]
-}
