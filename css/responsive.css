@@ -1,0 +1,25 @@
+/* css/responsive.css */
+@media (max-width: 900px) {
+    .hero-grid { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 2.8rem; }
+    .footer-main { grid-template-columns: repeat(2,1fr); gap: 40px; }
+    .dashboard-grid { grid-template-columns: 1fr; }
+    .detail-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 680px) {
+    .main-nav { display: none; }
+    .mobile-menu-btn { display: inline-block; }
+    .hero h1 { font-size: 2.2rem; }
+    .trust-grid { grid-template-columns: 1fr; gap: 40px; }
+    .section-padding { padding: 40px 0; }
+    .product-grid { gap: 18px; }
+    .footer-main { grid-template-columns: 1fr; }
+    .filter-row { flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 480px) {
+    .container { padding: 0 18px; }
+    .btn { padding: 10px 20px; }
+    .hero h1 { font-size: 2rem; }
+}

@@ -1,0 +1,157 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>CodeCanvas · digital products</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- navigation (shared) -->
+    <header class="site-header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="index.html" class="logo">CodeCanvas<span class="logo-dot">.</span></a>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                    </ul>
+                </nav>
+                <button class="mobile-menu-btn" aria-label="menu">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- hero -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-content">
+                        <h1>Tools & templates <br>built for <span class="highlight">modern creators</span></h1>
+                        <p class="hero-sub">Professional digital assets – scripts, UI kits, courses and developer tools. Instant delivery, lifetime updates.</p>
+                        <div class="hero-cta">
+                            <a href="products.html" class="btn btn-primary">Browse products</a>
+                            <a href="#featured" class="btn btn-outline">View features</a>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="hero-card-grid">
+                            <div class="mini-card"></div>
+                            <div class="mini-card"></div>
+                            <div class="mini-card"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- featured products -->
+        <section id="featured" class="featured section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Featured products</h2>
+                    <p>Hand-picked tools to supercharge your workflow</p>
+                </div>
+                <div class="product-grid" id="featured-products-container">
+                    <!-- dynamically loaded via js (featured) -->
+                </div>
+            </div>
+        </section>
+
+        <!-- categories -->
+        <section class="categories section-padding light-bg">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Explore by category</h2>
+                </div>
+                <div class="category-grid">
+                    <div class="category-card">Developer tools</div>
+                    <div class="category-card">UI & templates</div>
+                    <div class="category-card">Scripts & plugins</div>
+                    <div class="category-card">Video & audio</div>
+                    <div class="category-card">eBooks & guides</div>
+                    <div class="category-card">3D assets</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- trust / features -->
+        <section class="trust section-padding">
+            <div class="container">
+                <div class="trust-grid">
+                    <div class="trust-item">
+                        <div class="trust-icon">⚡</div>
+                        <h3>Instant delivery</h3>
+                        <p>Download immediately after purchase. No delays.</p>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-icon">🔒</div>
+                        <h3>Secure transaction</h3>
+                        <p>Encrypted payments and buyer protection.</p>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-icon">🔄</div>
+                        <h3>Lifetime updates</h3>
+                        <p>Free updates for all purchased products.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-col">
+                    <span class="footer-logo">CodeCanvas.</span>
+                    <p>Digital products for the modern developer.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="products.html">All products</a></li>
+                        <li><a href="#">Categories</a></li>
+                        <li><a href="#">Bestsellers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Account</h4>
+                    <ul>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CodeCanvas. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/products.js"></script>
+    <script>
+        // render featured (first 3) on homepage
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof window.allProducts !== 'undefined') {
+                renderProductList(window.allProducts.slice(0,3), 'featured-products-container');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!-- checkout.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout – CodeCanvas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header class="site-header">...</header>
+    <main class="checkout-main section-padding">
+        <div class="container small-container">
+            <h1>Complete your order</h1>
+            <div class="checkout-layout">
+                <div class="order-summary card">
+                    <h2>Order summary</h2>
+                    <div class="summary-row">
+                        <span>Astro UI kit ×1</span>
+                        <span>$49</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total</span>
+                        <span>$49</span>
+                    </div>
+                </div>
+
+                <div class="payment-section card">
+                    <h2>Payment instructions</h2>
+                    <p>Make payment via Binance or bank transfer, then enter transaction ID below.</p>
+                    <div class="payment-details">
+                        <div><strong>USDT (TRC20):</strong> TY3e...X9k</div>
+                        <div><strong>Bank (EU):</strong> IBAN: DE89 3704 0044 0532 0130</div>
+                    </div>
+
+                    <form id="checkout-form" class="checkout-form">
+                        <div class="form-group">
+                            <label for="txn-id">Transaction ID (manual verification)</label>
+                            <input type="text" id="txn-id" placeholder="e.g. 0x4F8A... or bank ref" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Submit order</button>
+                        <p class="form-note">We'll verify and send download access within 2 hours.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">...</footer>
+    <script src="js/checkout.js"></script>
+</body>
+</html>
